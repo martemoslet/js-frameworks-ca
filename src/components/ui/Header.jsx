@@ -1,13 +1,14 @@
-export default function Header(props) {
-    const background = props.bg;
-    const color = props.text;
-    const padding = props.padding;
+import { styled } from "styled-components"
 
-    return (<header style={{
-        background,
-        color,
-        padding
-    }}>
+const StyledHeader = styled.header`
+background-color: lavender;
+color: deeppink;
+padding: 20px;
+`
+
+export default function Header(props) {
+    return (<StyledHeader>
+        <h1>Header</h1>
         {props.children}
-        </header>)
+        </StyledHeader>)
 }
