@@ -1,0 +1,9 @@
+.primary {
+    border: 0;
+  background: none;
+  background-color: SlateBlue;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  max-width: 150px;
+}
