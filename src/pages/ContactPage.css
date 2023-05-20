@@ -1,0 +1,15 @@
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    color: deeppink;
+}
+
+input {
+  border: none transparent;
+  width: 400px;
+  font-size: 0.9em;
+  padding: 9px;
+  border-radius: 7px;
+  margin-top: 10px;
+  background-color: aqua;
+}
