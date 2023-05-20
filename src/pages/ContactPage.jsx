@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import "./ContactPage.css"
+import styles from "../components/Button.module.css";
 
 const schema = yup
   .object({
@@ -37,7 +39,8 @@ export default function Form() {
       }
 
       return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+          <h1>Contact us</h1>
             <label htmlFor="fullName">Full name</label>
             <input {...register('fullName')} />
             <p>{errors.fullName?.message}</p>
@@ -50,7 +53,7 @@ export default function Form() {
             <label htmlFor="body">Message</label>
             <input {...register('body')} />
             <p>{errors.body?.message}</p>
-            <input type="submit" />
+            <input type="submit" className={styles.primary} />
         </form>
       )
 }
