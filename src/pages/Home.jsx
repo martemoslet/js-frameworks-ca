@@ -1,9 +1,6 @@
-// import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import ProductList from '../components/ProductList';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import "./Home.css"
 
 const url = 'https://api.noroff.dev/api/v1/online-shop';
 
