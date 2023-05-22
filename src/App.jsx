@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-
 import Contact from "./pages/ContactPage";
 import Home from "./pages/Home";
-import SingleProduct from "./pages/ProductPage";
+import ProductPage from "./pages/ProductPage";
 
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home />} />
             <Route path="contactPage" element={<Contact />} />
-            <Route path="ProductPage/:id" element={<SingleProduct />} />
+            <Route path="ProductPage/:id" element={<ProductPage />} />
           </Route>
         </Routes>
 
