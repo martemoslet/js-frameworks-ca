@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
+import "./Product.css"
+import styles from "./Button.module.css";
 
 export function Product({ productData }) {
     return (
-        <div className="product">
-            <h2>{productData.title}</h2>
-                   <img src={productData.imageUrl} />
-                   <p>{productData.description}</p>
-                   <Link to="../pages/productPage">
-                       <button>View product</button>
+        <div className="card">
+                   <img src={productData.imageUrl} alt={productData.title} />
+                   <p>{productData.title}</p>
+                   <Link to={`/productPage/${productData.id}`}>
+                    <button className={styles.primary}>View product</button>
                    </Link>
-
         </div>
     )
 }
