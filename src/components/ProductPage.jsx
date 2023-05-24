@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./Product.css"
 import styles from "./Button.module.css";
+import { CiShoppingTag } from "react-icons/ci";
+
 
 export default function SingleProduct() {
     const [data, setData] = useState(null);
@@ -41,15 +43,25 @@ export default function SingleProduct() {
 
     const diff = data.price - data.discountedPrice
 
+    //for (let i = 0; i < data.reviews.length; i++)
+
     return (
-      <div className='product-container'>
-        <div className='card'>
-        <h1>{data.title}</h1>
+      <div>
+        <h1 className='product-title'>{data.title}</h1>
+        <div className='single-product-card'>
+        
         <img src={data.imageUrl} alt={data.title} />
+        <div>
         <p>{data.description}</p>
-        <p>Price: {data.discountedPrice} NOK</p>
-        <p>{data.discountedPrice === data.price ? "" : `Save ${diff} NOK`}</p>
+        <p className='price-text'><CiShoppingTag size={22} className="price-icon" /> {data.discountedPrice} NOK</p>
+        <p className='sale-text'>{data.discountedPrice === data.price ? "" : `This item is no sale! Save ${diff} NOK`}</p>
         <button className={styles.primary}>Add to bag</button>
+        <div>
+        </div>
+          
+          
+        </div>
+        <h2>Reviews</h2>
       </div>
       </div>
 
