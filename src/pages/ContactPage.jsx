@@ -8,7 +8,7 @@ const schema = yup
   .object({
     fullName: yup
       .string()
-      .min(3, 'Your name should be at least 3 characters.')
+      .min(3, 'Your name should be at least 3 characters')
       .required('Please enter your full name'),
     email: yup
       .string()
@@ -16,11 +16,11 @@ const schema = yup
       .required('Please enter a valid email address'),
     subject: yup
       .string()
-      .min(3, 'Your subject should be at least 3 characters.')
+      .min(3, 'Your subject should be at least 3 characters')
       .required('Please enter a subject'),
     body: yup
       .string()
-      .min(3, 'Your message should be at least 3 characters.')
+      .min(3, 'Your message should be at least 3 characters')
       .required('Please enter a message'),
   })
   .required();
