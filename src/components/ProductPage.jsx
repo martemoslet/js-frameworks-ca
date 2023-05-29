@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import "./Product.css"
 import styles from "./Button.module.css";
 import { CiShoppingTag } from "react-icons/ci";
-
+import Reviews from './Reviews';
 
 export default function SingleProduct() {
     const [data, setData] = useState(null);
@@ -43,8 +43,6 @@ export default function SingleProduct() {
 
     const diff = data.price - data.discountedPrice
 
-    //for (let i = 0; i < data.reviews.length; i++)
-
     return (
       <div>
         <h1 className='product-title'>{data.title}</h1>
@@ -55,14 +53,14 @@ export default function SingleProduct() {
         <p>{data.description}</p>
         <p className='price-text'><CiShoppingTag size={22} className="price-icon" /> {data.discountedPrice} NOK</p>
         <p className='sale-text'>{data.discountedPrice === data.price ? "" : `This item is no sale! Save ${diff} NOK`}</p>
-        <button className={styles.primary}>Add to bag</button>
+        <button className={styles.secondary}>Add to bag</button>
         <div>
         </div>
-          
-          
         </div>
-        <h2>Reviews</h2>
+      
       </div>
+      <h2>Reviews</h2>
+        <Reviews reviews={data.reviews} />
       </div>
 
     );
