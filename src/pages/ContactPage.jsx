@@ -53,7 +53,7 @@ export default function Form() {
             <label htmlFor="body">Message</label>
             <input {...register('body')} />
             <p>{errors.body?.message}</p>
-            <input type="submit" className={styles.primary} />
+            <input type="submit" className={styles.secondary} />
         </form>
       )
 }
