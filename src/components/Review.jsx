@@ -1,9 +1,10 @@
-export default function Review({ username, description }) {
+export default function Review({ username, description, rating }) {
 
     return (
-        <div>
-            <h3>User{username}</h3>
-            <p>Description{description}</p>
+        <div className="review-container">
+            <h3>{username}</h3>
+            <p>{description}</p>
+            <p className="rating">Rating: {rating}</p>
         </div>
     );
   }
