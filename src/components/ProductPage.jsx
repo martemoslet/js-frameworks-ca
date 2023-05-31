@@ -47,21 +47,19 @@ export default function SingleProduct() {
       <div>
         <h1 className='product-title'>{data.title}</h1>
         <div className='single-product-card'>
-        
         <img src={data.imageUrl} alt={data.title} />
         <div>
         <p>{data.description}</p>
         <p className='price-text'><CiShoppingTag size={22} className="price-icon" /> {data.discountedPrice} NOK</p>
         <p className='sale-text'>{data.discountedPrice === data.price ? "" : `This item is no sale! Save ${diff} NOK`}</p>
         <button className={styles.secondary}>Add to bag</button>
-        <div>
         </div>
         </div>
-      
-      </div>
-      <h2>Reviews</h2>
-        <Reviews reviews={data.reviews} />
-      </div>
+        <div className='reviews'>
+        <h2>{data.reviews.length === 0 ? "This item has no reviews yet!" : `Reviews`}</h2>
+          <Reviews reviews={data.reviews} />
+        </div>
+        </div>
 
     );
   }
