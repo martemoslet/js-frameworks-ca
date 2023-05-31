@@ -51,6 +51,30 @@
     padding-right: 3px;
 }
 
+.reviews {
+    margin: auto;
+    max-width: 500px;
+}
+
+.reviews h2 {
+    margin-top: 40px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.review-container {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 @media (min-width: 900px) {
     .single-product-card {
         display: grid;
