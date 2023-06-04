@@ -1,10 +1,10 @@
-import { Checkout } from "../components/Checkout";
+import Checkout from "../components/Checkout";
 
 export default function CheckoutPage () {
     return (
-        <div>
-          <Checkout />
-        </div>
-  
+        <div className="checkout-card">
+        <h1>Checkout</h1>
+        <Checkout />
+    </div>
       );
 }
