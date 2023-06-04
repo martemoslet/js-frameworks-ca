@@ -27,3 +27,36 @@ li {
     border: none;
     cursor: pointer;
 }
+
+.checkout-card {
+    text-align: center;
+}
+
+.search {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar {
+    width: 100%;
+}
+
+.search-list {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: scroll;
+    border-radius: 7px;
+}
+
+.search-result {
+    padding: 10px 15px 10px 15px;
+}
+
+.search-result:hover {
+    background-color: rgb(255, 150, 150);
+}
