@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { CiShoppingCart} from "react-icons/ci";
 import "../../App.css"
+import { useContext } from 'react';
+import { CartContext } from '../CartProvider';
 
 export default function Nav() {
+    const { cart } = useContext(CartContext)
     return (
         <nav>
             <ul>
@@ -15,12 +18,11 @@ export default function Nav() {
                 <li>
                     <Link to="/checkoutPage">
                     <button className='cart-btn'>
-                    <CiShoppingCart size={25} />
+                    {cart.length} <CiShoppingCart size={25} />
                     </button>
                     </Link>
                 </li>
             </ul>
-            
         </nav>
     );
 }
