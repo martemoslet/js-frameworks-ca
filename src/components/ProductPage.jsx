@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import "./Product.css"
 import styles from "./Button.module.css";
 import { CiShoppingTag } from "react-icons/ci";
 import Reviews from './Reviews';
+import { CartContext } from "./CartProvider"
 
 export default function SingleProduct() {
+    const { addToCart } = useContext(CartContext)
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -43,8 +45,11 @@ export default function SingleProduct() {
 
     const diff = data.price - data.discountedPrice
 
+    const title = data.title
+    const discountedPrice = data.discountedPrice
+
     return (
-      <div>
+      <div id={id}>
         <h1 className='product-title'>{data.title}</h1>
         <div className='single-product-card'>
         <img src={data.imageUrl} alt={data.title} />
@@ -52,7 +57,7 @@ export default function SingleProduct() {
         <p>{data.description}</p>
         <p className='price-text'><CiShoppingTag size={22} className="price-icon" /> {data.discountedPrice} NOK</p>
         <p className='sale-text'>{data.discountedPrice === data.price ? "" : `This item is no sale! Save ${diff} NOK`}</p>
-        <button className={styles.secondary}>Add to bag</button>
+        <button className={styles.secondary} onClick={() => addToCart({id, title, discountedPrice})}>Add to bag</button>
         </div>
         </div>
         <div className='reviews'>
