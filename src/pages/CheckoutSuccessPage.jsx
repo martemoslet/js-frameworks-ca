@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function CheckoutSuccessPage() {
     return (
-        <div className="checkout-card">
+        <div className="checkout-success">
         <h1>Checkout success!</h1>
         <Link to="/">
             <button className={styles.primary}>Back to home page</button>
