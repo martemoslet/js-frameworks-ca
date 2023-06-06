@@ -3,8 +3,8 @@ export default function CartProducts ({ cartItem }) {
 
     return (
         <div>
-            <h2>Product: {title}</h2>
-            <p>Price {discountedPrice}</p>
+            <h2>{title}</h2>
+            <p>Price {discountedPrice} NOK</p>
         </div>
     )
 };
