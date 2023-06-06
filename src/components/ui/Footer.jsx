@@ -1,13 +1,10 @@
-export default function Footer(props) {
-    const background = props.bg;
-    const color = props.text;
-    const padding = props.padding;
+import { styled } from "styled-components"
 
-    return (<footer style={{
-        background,
-        color,
-        padding
-    }}>
-        {props.children}
-        </footer>)
+const StyledFooter = styled.footer`
+
+`
+
+export default function Footer() {
+    return (<StyledFooter>
+        </StyledFooter>)
 }
