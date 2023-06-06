@@ -9,7 +9,6 @@ import CheckoutSuccess from "./pages/CheckoutSuccessPage";
 export default function App() {
   return (
     <div>
-
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home />} />
@@ -19,7 +18,6 @@ export default function App() {
             <Route path="checkoutSuccessPage" element={<CheckoutSuccess />} />
           </Route>
         </Routes>
-
     </div>
   );
 }
