@@ -29,6 +29,36 @@ li {
 }
 
 .checkout-card {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 400px;
+}
+
+.checkout-card h1,
+.empty-cart {
+    text-align: center;
+}
+
+.checkout-card h2 {
+    font-size: 1.1rem;
+}
+
+.checkout-card button,
+.checkout-success button {
+    margin-top: 40px;
+}
+
+hr,
+.payment {
+    margin-top: 50px;
+}
+
+.empty-cart-btn {
+    text-align: center;
+}
+
+.checkout-success {
     text-align: center;
 }
 
