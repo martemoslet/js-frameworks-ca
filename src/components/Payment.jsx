@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Payment() {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
 
   function onFormSubmit(event) {
     event.preventDefault();
@@ -17,8 +17,8 @@ export default function Payment() {
       cardNumber,
     };
 
-    fetch('', {
-      method: 'POST',
+    fetch("", {
+      method: "POST",
       body: JSON.stringify(body),
     });
   }
@@ -52,16 +52,8 @@ export default function Payment() {
           placeholder="Address"
           onChange={onAddressChange}
         />
-        <input
-          value={email}
-          placeholder="Email"
-          onChange={onEmailChange}
-        />
-        <input 
-        value={city} 
-        placeholder="City" 
-        onChange={onCityChange} 
-        />
+        <input value={email} placeholder="Email" onChange={onEmailChange} />
+        <input value={city} placeholder="City" onChange={onCityChange} />
         <input
           value={cardNumber}
           placeholder="Card number"

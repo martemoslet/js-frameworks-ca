@@ -1,4 +1,7 @@
-import Review from "./Review"
+import Review from "./Review";
 
 export default function Reviews({ reviews }) {
-    return reviews && reviews.map((review) =>((<Review key={review.id} {...review} />)))}
+  return (
+    reviews && reviews.map((review) => <Review key={review.id} {...review} />)
+  );
+}

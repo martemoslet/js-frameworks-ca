@@ -8,16 +8,14 @@ import CheckoutSuccess from "./pages/CheckoutSuccessPage";
 
 export default function App() {
   return (
-    <div>
-        <Routes>
-          <Route path="/" element={<Layout/>}>
-            <Route index element={<Home />} />
-            <Route path="contactPage" element={<Contact />} />
-            <Route path="ProductPage/:id" element={<ProductPage />} />
-            <Route path="checkoutPage" element={<CheckoutPage />} />
-            <Route path="checkoutSuccessPage" element={<CheckoutSuccess />} />
-          </Route>
-        </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="contactPage" element={<Contact />} />
+        <Route path="ProductPage/:id" element={<ProductPage />} />
+        <Route path="checkoutPage" element={<CheckoutPage />} />
+        <Route path="checkoutSuccessPage" element={<CheckoutSuccess />} />
+      </Route>
+    </Routes>
   );
 }

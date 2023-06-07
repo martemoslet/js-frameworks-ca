@@ -1,90 +1,90 @@
 .product-container {
-    max-width: 1500px;
-    justify-content: center;
-    margin: auto;
-    display: flex;
-    flex-flow: row wrap;
-    grid-gap: 7px;
-    padding-top: 50px;
+  max-width: 1500px;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  grid-gap: 7px;
+  padding-top: 50px;
 }
 
 .card,
 .single-product-card {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    max-width: 350px;
-    border: none;
-    padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  max-width: 350px;
+  border: none;
+  padding-bottom: 20px;
 }
 
 .card img,
 .single-product-card img {
-    height: 400px;
-    object-fit: cover;
-    background-position: center;
+  height: 400px;
+  object-fit: cover;
+  background-position: center;
 }
 
 .single-product-card {
-    margin: auto;
+  margin: auto;
 }
 
 .product-title {
-    text-align: center;
+  text-align: center;
 }
 
 .price-text {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .price-text,
 .sale-text {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .sale-text {
-    color: rgb(255, 40, 28);
+  color: rgb(255, 40, 28);
 }
 
 .price-icon {
-    padding-right: 3px;
+  padding-right: 3px;
 }
 
 .reviews {
-    margin: auto;
-    max-width: 500px;
+  margin: auto;
+  max-width: 500px;
 }
 
 .reviews h2 {
-    margin-top: 40px;
-    font-size: 1.3rem;
-    text-align: center;
+  margin-top: 40px;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .review-container {
-    background-color: white;
-    padding: 20px;
-    width: 100%;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    margin-bottom: 10px;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin-bottom: 10px;
 }
 
 .rating {
-    font-size: 0.8rem;
-    font-style: italic;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 @media (min-width: 900px) {
-    .single-product-card {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: 2;
-        max-width: 800px;
-        grid-gap: 10px;
-    }
-    .single-product-card img {
-        height: 600px;
-        max-width: 500px;
-    }
+  .single-product-card {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 2;
+    max-width: 800px;
+    grid-gap: 10px;
+  }
+  .single-product-card img {
+    height: 600px;
+    max-width: 500px;
+  }
 }
