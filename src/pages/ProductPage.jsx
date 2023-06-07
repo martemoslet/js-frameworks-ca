@@ -36,8 +36,6 @@ export default function ProductPage() {
     return <div>Error</div>;
   }
 
-  console.log(data);
-
   return (
       <SingleProduct key={data.id} {...data} />
   );
