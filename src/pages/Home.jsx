@@ -1,21 +1,16 @@
 import { useEffect, useState } from "react";
 import ProductList from "../components/ProductList";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+//import { useLocalStorage } from "../hooks/useLocalStorage";
 import SearchBar from "../components/Search";
 import SearchList from "../components/SearchList";
 
-//const url = "https://api.noroff.dev/api/v1/online-shop";
-
 export default function Home() {
-  const [products] = useLocalStorage("products", []);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    async function getData() {
-      //const response = await fetch(url);
-      //const json = await response.json();
-      //setProducts(json);
-    }
-    getData();
+    fetch("https://api.noroff.dev/api/v1/online-shop")
+    .then(res => res.json())
+    .then(products => setProducts(products))
   }, []);
 
   const [searchResults, setSearchResults] = useState([]);
