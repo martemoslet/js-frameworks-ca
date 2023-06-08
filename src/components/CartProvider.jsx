@@ -9,12 +9,12 @@ export default function CartProvider({ children }) {
 
   function addToCart(product) {
     setCart([...cart, product]);
-    localStorage[key] = JSON.stringify(cart);
+    localStorage[key] = JSON.stringify([...cart, product]);
   }
 
   function removeFromCart(product) {
     setCart(cart.filter((item) => item.id === product.id));
-    localStorage[key] = JSON.stringify(cart);
+    localStorage[key] = JSON.stringify([...cart, product]);
   }
 
   function clearCart() {
